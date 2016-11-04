@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // create Card Constructor
   Card = function(point, suit) {
     this.point = point;
     this.suit = suit;
@@ -21,6 +22,75 @@ $(document).ready(function() {
     }
 
     return 'images/' + point + '_of_' + suit + '.png';
+  }
+
+  // create Hand Constructor
+  function Hand() {
+    this.cards = [];
+    this.points = 0;
+
+    this.getPoints = function() {
+      var cards = this.cards;
+      var length = this.cards.length;
+      var totalPoints = 0;
+      var counter = 0;
+
+      this.points = cards.map(function(card) {
+      if (card.point > 10) {
+        card.point = 10;
+      }
+      counter++;
+      if (card.point !== 1) {
+        totalPoints += card.point;
+      }
+      if (counter === length) {
+        if (totalPoints <= 10) {
+          if (card.point === 1) {
+            card.point = 11;
+          }
+        }
+      }
+      return card.point
+      }).reduce(function(a, b) {
+        return a + b;
+      }, 0);
+      return this.points;
+    }
+
+    this.addCard = function(newCard) {
+      this.cards.push({point: newCard.point, suit: newCard.suit});
+    };
+  }
+
+  // Create Deck Constructor
+  function Deck() {
+    this.deck = newDeck();
+    this.usedCards = [];
+
+    this.draw = function() {
+      var drawnCard = this.deck[0];
+
+      this.usedCards.push(drawnCard);
+      this.deck.splice(0, 1);
+
+      return drawnCard;
+    }
+    this.shuffle = function() {
+      var array = this.deck;
+      var i = 0, j = 0, temp = null;
+
+      for (i = array.length - 1; i > 0; i -= 1) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      this.deck = array;
+      return this.deck;
+    }
+    this.numCardsLeft = function() {
+      return this.deck.length;
+    }
   }
 
   function deal(handSelector) {
@@ -99,6 +169,15 @@ $(document).ready(function() {
   }
 
   function resetGame() {
+
+    // add used cards back into the deck
+    myDeck.usedCards.forEach(function(card) {
+      myDeck.deck.push(card);
+    });
+
+    // clear used cards
+    myDeck.usedCards = [];
+
     // remove cards from the table
     $("#player-hand").empty();
     $("#dealer-hand").empty();
@@ -106,6 +185,7 @@ $(document).ready(function() {
     // shuffle the deck
     myDeck.shuffle();
 
+    // reset cards and points
     dealerHand.cards = [];
     playerHand.cards = [];
     dealerHand.points = [];
@@ -121,73 +201,6 @@ $(document).ready(function() {
 
     // disable stand buttons
     $("#stand-button").prop('disabled', true);
-  }
-
-  function Hand() {
-    this.cards = [];
-    this.points = 0;
-
-    this.getPoints = function() {
-      var cards = this.cards;
-      var length = this.cards.length;
-      var totalPoints = 0;
-      var counter = 0;
-
-      this.points = cards.map(function(card) {
-      if (card.point > 10) {
-        card.point = 10;
-      }
-      counter++;
-      if (card.point !== 1) {
-        totalPoints += card.point;
-      }
-      if (counter === length) {
-        if (totalPoints <= 10) {
-          if (card.point === 1) {
-            card.point = 11;
-          }
-        }
-      }
-      return card.point
-      }).reduce(function(a, b) {
-        return a + b;
-      }, 0);
-      return this.points;
-    }
-
-    this.addCard = function(newCard) {
-      this.cards.push({point: newCard.point, suit: newCard.suit});
-    };
-  }
-
-  function Deck() {
-    this.deck = newDeck();
-    this.usedCards = [];
-
-    this.draw = function() {
-      var drawnCard = this.deck[0];
-
-      this.usedCards.push(drawnCard);
-      this.usedCards.push(this.deck.splice(0, 1));
-      console.log(drawnCard);
-      return drawnCard;
-    }
-    this.shuffle = function() {
-      var array = this.deck;
-      var i = 0, j = 0, temp = null;
-
-      for (i = array.length - 1; i > 0; i -= 1) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-      this.deck = array;
-      return this.deck;
-    }
-    this.numCardsLeft = function() {
-      return this.deck.length;
-    }
   }
 
   // create a new deck of cards
