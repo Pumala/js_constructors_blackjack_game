@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+#table {
+  height: 450px;
+  width: 100%;
+  background-color: brown;
+  border-radius: 30%;
+  /*border: 3px solid #222;*/
+  margin: 50px auto;
+}
+
+#messages {
+  width: 100%;
+  height: 60px;
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 60px;
+}
+label {
+  color: #fff;
+}
+.user {
+  padding-left: 20px;
+}
+#dealer-hand, #player-hand {
+  width: 90%;
+  height: 65px;
+  margin: 15px auto;
+  background-color: #ca3a3a;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+button {
+  /*padding: 10px 15px;*/
+  border-radius: 5px;
+  background-color: #fff;
+  border: none;
+  font-size: 1.25em;
+}
+button:focus {
+  outline: none;
+}
+
+/*************************
+          CARDs
+*************************/
+.card {
+  height: 58px;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+#dealer-hole-card {
+  width: 70px;
+  border-radius: 10px;
+  margin-top: 3px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
