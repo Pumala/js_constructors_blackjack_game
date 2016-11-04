@@ -18,6 +18,9 @@ $(document).ready(function() {
     $("#hit-button").prop('disabled', false);
     $("#stand-button").prop('disabled', false);
 
+    // check if dealer gets blackjack
+    dealerGetsBlackjack();
+
   });
 
   $("#hit-button").click(function() {

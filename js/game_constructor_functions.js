@@ -203,6 +203,15 @@
     $("#stand-button").prop('disabled', true);
   }
 
+  function dealerGetsBlackjack() {
+    // check if dealer gets blackjack
+    // if so, end game
+    if (dealerHand.points === 21) {
+      $('#messages').text("Dealer Wins!");
+      $("#hit-button").prop('disabled', true);
+    }
+  }
+
   // create a new deck of cards
   // it's a global variable so
   // all the local scopes can access it
