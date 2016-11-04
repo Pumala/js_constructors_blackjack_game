@@ -5,10 +5,24 @@ $(document).ready(function() {
     this.suit = suit;
   }
 
-  Card.prototype.getImageUrl = function() {
+  Card.prototype.getImageUrl = function(handSelector) {
 
-    var point = this.point;
-    var suit = this.suit;
+    // grab the first card in the deck
+    var card1 = myDeck.deck[0];
+
+    // remove that card from the deck to avoid dupicated
+    myDeck.deck.splice(0, 1);
+
+    // take that card that has now been used in a game
+    // and add that to an array that stores used cards
+    // to be later reinserted before new game
+    usedCards.push(card1);
+
+    // assign the card's points to a variable called point
+    var point = card1.point;
+
+    // var point = card.point;
+    var suit = card1.suit;
 
     if (point === 11) {
       point = 'jack';
@@ -20,30 +34,18 @@ $(document).ready(function() {
       point = 'ace';
     }
 
-    return 'images/' + point + '_of_' + suit + '.png';
-  }
-
-  function deal(handSelector) {
-
-    // draw the first card from the deck
-    var myCard = myDeck.draw();
-
-    // render the image on the page
-    $("#"+ handSelector +"-hand").append('<img class="card" src="' + myCard.getImageUrl() + '" alt="" />');
-
-    // check who is the current Hand Selector
+    // whoseHand is an array of constructors (a.k.a. cards)
+    var whoseHand = "";
     if (handSelector === "player") {
-      hand = playerHand;
+      whoseHand = playerHand;
     } else {
-      hand = dealerHand;
+      whoseHand = dealerHand;
     }
+    whoseHand.cards.push(card1);
 
-    // add the card to the current Hand Selector's cards
-    hand.cards.push(myCard);
-
-    // update the Hand Selector's points
-    $('#' + handSelector + '-points').text(hand.getPoints());
-
+    $("#" + handSelector + "-hand").append('<img class="card" src="images/' + point + '_of_' + suit + '.png" alt="" />');
+    $('#' + handSelector + '-points').text(whoseHand.getPoints());
+    // return 'images/' + point + '_of_' + this.suit + '.png';
   }
 
   function newDeck() {
@@ -146,55 +148,62 @@ $(document).ready(function() {
   // to avoid duplicates in a game
   var usedCards = [];
 
+  // when player clicks on the deal button
+  // deal two cards to the dealer and player
+  // the deck of cards has already been shuffled at this point
+  // dealing order => 1 card to dealer, then 1 card to player,
+  // then 1 more card to dealer, and 1 more card to player
+
   $("#deal-button").click(function() {
 
     // shuffle the deck
     myDeck.shuffle();
 
-    deal('player');
-    deal('dealer');
-    deal('player');
-    deal('dealer');
+    // // grab the first card in the deck
+    // var card1 = myDeck.deck[0];
+    //
+    // // remove that card from the deck to avoid dupicated
+    // myDeck.deck.splice(0, 1);
+    //
+    // // take that card that has now been used in a game
+    // // and add that to an array that stores used cards
+    // // to be later reinserted before new game
+    // usedCards.push(card1);
+    //
+    // // assign the card's points to a variable called point
+    // var point = card1.point;
 
-    // disable the deal button
-    // only deal once per game
+    myDeck.deck[0].getImageUrl('player');
+    myDeck.deck[0].getImageUrl('dealer');
+    myDeck.deck[0].getImageUrl('player');
+    myDeck.deck[0].getImageUrl('dealer');
+
     $("#deal-button").prop('disabled', true);
   });
 
   $("#hit-button").click(function() {
-    deal('player');
+    myDeck.deck[0].getImageUrl('player');
 
     // check if player has Busted
     if (playerHand.getPoints() > 21) {
       $('#messages').text("You busted!");
       $("#hit-button").prop('disabled', true);
+      $("#stand-button").prop('disabled', true);
     }
   });
 
   $("#stand-button").click(function() {
-    var message = "";
+
     // check if dealer has a minimum of 17
-    if (dealerHand.getPoints() < 17) {
-      while(dealerHand.getPoints() < 17) {
-        deal('dealer');
+    if (dealerHand.getPoints() < 16) {
+      while(dealerHand < 16) {
+        myDeck.deck[0].getImageUrl('dealer');
       }
     }
-    console.log("DEALER POINTS: " + dealerHand.getPoints());
-    console.log("PLAYER POINTS: " + playerHand.getPoints());
 
-    // determine the winner
-    if (dealerHand.getPoints() === playerHand.getPoints()) {
-      message = "It's a push!";
-    } else if (dealerHand.getPoints() > 21) {
-      message = "Dealer busts!";
-    } else if (dealerHand.getPoints() > playerHand.getPoints()) {
-      message = "Dealer wins!";
-    } else {
-      message = "You win!";
+    if (dealerHand.getPoints() === playerHand().getPoints) {
+      $('#messages').text("It's a push!");
     }
-
-    // render message on the page
-    $('#messages').text(message);
 
   });
 
