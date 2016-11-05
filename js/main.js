@@ -1,46 +1,24 @@
-$(document).ready(function() {
+var game = new Game();
 
-  $("#deal-button").click(function() {
+$("#deal-button").click(function() {
 
-    // // shuffle the deck
-    // myDeck.shuffle();
+  game.deal();
 
-    deal('player');
-    deal('dealer');
-    deal('player');
-    deal('dealer');
+});
 
-    // disable the deal button
-    // only deal once per game
-    $("#deal-button").prop('disabled', true);
+$("#hit-button").click(function() {
 
-    // undisable hit and stand buttons
-    $("#hit-button").prop('disabled', false);
-    $("#stand-button").prop('disabled', false);
+  game.hit();
 
-    // check if dealer gets blackjack
-    dealerGetsBlackjack();
+});
 
-  });
+$("#stand-button").click(function() {
+  game.stand();
 
-  $("#hit-button").click(function() {
+});
 
-    deal('player');
+$("#reset-button").click(function() {
 
-    // check if player busts or not
-    playerBusts()
-
-  });
-
-  $("#stand-button").click(function() {
-    getWinner();
-
-  });
-
-  $("#reset-button").click(function() {
-
-    resetGame();
-
-  });
+  game.resetGame();
 
 });
