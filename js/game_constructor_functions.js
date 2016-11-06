@@ -108,15 +108,20 @@
     return this.newDeck.length;
   }
 
-  Deck.prototype.deal = function(handSelector) {
+  Deck.prototype.deal = function(handSelector, currentPlayerHand) {
 
     // draw the first card from the deck
     var myCard = this.draw();
 
     // render the image on the page
-    $("#"+ handSelector +"-hand").append('<img class="card" src="' + myCard.getImageUrl() + '" alt="" />');
+    $("#"+ handSelector +"-hand").append('<img class="card" src="' + myCard.getImageUrl() + '" alt="card image" />');
 
-    return myCard;
+    // add the card to the current player's hand
+    currentPlayerHand.cards.push(myCard);
+
+    // update the current player's point count
+    $('#' + handSelector + '-points').text(currentPlayerHand.getPoints());
+
   }
 
   // Create Game Constructor
@@ -135,20 +140,10 @@
     this.myDeck.shuffle();
 
     // deal 4 times => order: Player, Dealer, Player, Dealer
-    var card1 = this.myDeck.deal('player');
-    var card2 = this.myDeck.deal('dealer');
-    var card3 = this.myDeck.deal('player');
-    var card4 = this.myDeck.deal('dealer');
-
-    this.playerHand.cards.push(card1);
-    this.playerHand.cards.push(card3);
-
-    $('#player-points').text(this.playerHand.getPoints());
-
-    this.dealerHand.cards.push(card2);
-    this.dealerHand.cards.push(card4);
-
-    $('#dealer-points').text(this.dealerHand.getPoints());
+    this.myDeck.deal('player', this.playerHand);
+    this.myDeck.deal('dealer', this.dealerHand);
+    this.myDeck.deal('player', this.playerHand);
+    this.myDeck.deal('dealer', this.dealerHand, 'hole');
 
     this.dealerGetsBlackjack();
 
@@ -157,7 +152,7 @@
   Game.prototype.dealerGetsBlackjack = function() {
     // check if dealer gets blackjack
     if (this.dealerHand.points === 21) {
-      $('#messages').text("Dealer Wins!");
+      $('#messages').text("Blackjack! Dealer Wins!");
       $("#hit-button").prop('disabled', true);
     }
     $("#deal-button").prop('disabled', true);
@@ -166,11 +161,8 @@
   }
 
   Game.prototype.hit = function() {
-    var card = this.myDeck.deal('player');
 
-    this.playerHand.cards.push(card);
-
-    $('#player-points').text(this.playerHand.getPoints());
+    this.myDeck.deal('player', this.playerHand);
 
     // check if player busted
     if (this.playerHand.getPoints() > 21) {
@@ -186,10 +178,7 @@
     // check if dealer has a minimum of 17
     if (this.dealerHand.getPoints() < 17) {
       while(this.dealerHand.getPoints() < 17) {
-        var card = this.myDeck.deal('dealer');
-
-        this.dealerHand.cards.push(card);
-
+        this.myDeck.deal('dealer', this.dealerHand);
         $('#dealer-points').text(this.dealerHand.getPoints());
       }
     }
@@ -200,9 +189,15 @@
     } else if (this.dealerHand.getPoints() > 21) {
       message = "Dealer busts!";
     } else if (this.dealerHand.getPoints() > this.playerHand.getPoints()) {
-      message = "Dealer wins!";
+      if (this.dealerHand.getPoints() === 21) {
+        message = "Blackjack! ";
+      }
+      message += "Dealer wins!";
     } else {
-      message = "You win!";
+      if (this.playerHand.getPoints() === 21) {
+        message = "Blackjack! ";
+      }
+      message += "You win!";
     }
 
     // render message on the page
@@ -219,7 +214,10 @@
     this.myDeck.currentDeck = [];
 
     // instantiate a new game
-    new Game();
+    game = new Game();
+
+    console.log("DealerHand Points: " + this.dealerHand.points);
+    console.log("NEW GAME: DealerHand Points: " + this.dealerHand.points);
 
     // remove cards from the table
     $("#player-hand").empty();
@@ -231,8 +229,8 @@
     // reset cards and points
     this.dealerHand.cards = [];
     this.playerHand.cards = [];
-    this.dealerHand.points = [];
-    this.playerHand.points = [];
+    this.dealerHand.points = 0;
+    this.playerHand.points = 0;
 
     // remove all messages and point displays
     $("#dealer-points").text("");
