@@ -33,7 +33,7 @@
   Hand.prototype.getPoints = function() {
 
     var cards = this.cards;
-    var length = this.cards.length;
+    var length = cards.length;
     var totalPoints = 0;
     var counter = 0;
 
@@ -140,6 +140,7 @@
     this.myDeck = new Deck();
     this.dealerHand = new Hand();
     this.playerHand = new Hand();
+    this.revealedDealerHole = false;
   }
 
   Game.prototype.deal = function() {
@@ -171,7 +172,7 @@
     $("#hit-button").prop('disabled', false);
   }
 
-  Game.prototype.flipDealerHoleCard = function() {
+  Game.prototype.revealDealerHoleCard = function() {
     // remove dealer's hole card (back image)
     $('#dealer-hole-card').remove();
 
@@ -179,14 +180,17 @@
     $('#dealer-hand').append('<img class="card" src="' + this.dealerHand.cards[1].getImageUrl() + '" alt="card image" />');
 
     // update dealer's points to display current points
-    $('#dealer-points').text(this.dealerHand.points);
+    $('#dealer-points').text(this.dealerHand.getPoints());
   }
 
   Game.prototype.hit = function() {
 
     this.myDeck.deal('player', this.playerHand);
 
-    this.flipDealerHoleCard();
+    if (!this.revealedDealerHole) {
+      this.revealDealerHoleCard();
+      this.revealedDealerHole = true;
+    }
 
     // check if player busted
     if (this.playerHand.getPoints() > 21) {
@@ -199,7 +203,7 @@
   Game.prototype.stand = function() {
     var message = "";
 
-    this.flipDealerHoleCard();
+    this.revealDealerHoleCard();
 
     // check if dealer has a minimum of 17
     if (this.dealerHand.getPoints() < 17) {
