@@ -11,15 +11,26 @@
     var point = this.point;
     var suit = this.suit;
 
-    if (point === 11) {
-      point = 'jack';
-    } else if (point === 12) {
-      point = 'queen';
-    } else if (point === 13) {
-      point = 'king'
-    } else if (point === 1) {
-      point = 'ace';
+    var cardNames = {
+      11: 'jack',
+      12: 'queen',
+      13: 'king',
+      1: 'ace'
+    };
+
+    if (point > 10 || point === 1) {
+      point = cardNames[point];
     }
+
+    // if (point === 11) {
+    //   point = 'jack';
+    // } else if (point === 12) {
+    //   point = 'queen';
+    // } else if (point === 13) {
+    //   point = 'king'
+    // } else if (point === 1) {
+    //   point = 'ace';
+    // }
 
     return 'images/' + point + '_of_' + suit + '.png';
   }
@@ -36,6 +47,7 @@
     var length = cards.length;
     var totalPoints = 0;
     var counter = 0;
+    var count_1 = false;
 
     this.points = cards.map(function(card) {
     if (card.point > 10) {
@@ -44,12 +56,12 @@
     counter++;
     if (card.point !== 1) {
       totalPoints += card.point;
+    } else {
+      count_1 = true;
     }
     if (counter === length) {
-      if (totalPoints <= 10) {
-        if (card.point === 1) {
-          card.point = 11;
-        }
+      if (totalPoints <= 10 && count_1) {
+        card.point += 10;
       }
     }
     return card.point
@@ -217,6 +229,7 @@
     if (this.dealerHand.getPoints() === this.playerHand.getPoints()) {
       message = "It's a push!";
     } else if (this.dealerHand.getPoints() > 21) {
+      console.log("DEaler points clicked stand: " + this.dealerHand.getPoints());
       message = "Dealer busts!";
     } else if (this.dealerHand.getPoints() > this.playerHand.getPoints()) {
       if (this.dealerHand.getPoints() === 21) {
@@ -245,9 +258,6 @@
 
     // instantiate a new game
     game = new Game();
-
-    console.log("DealerHand Points: " + this.dealerHand.points);
-    console.log("NEW GAME: DealerHand Points: " + this.dealerHand.points);
 
     // remove cards from the table
     $("#player-hand").empty();
