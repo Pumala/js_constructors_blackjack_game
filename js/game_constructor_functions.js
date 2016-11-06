@@ -108,19 +108,30 @@
     return this.newDeck.length;
   }
 
-  Deck.prototype.deal = function(handSelector, currentPlayerHand) {
+  Deck.prototype.deal = function(handSelector, currentPlayerHand, hole) {
+    var cardImg = "";
+    var text = "";
 
     // draw the first card from the deck
     var myCard = this.draw();
 
-    // render the image on the page
-    $("#"+ handSelector +"-hand").append('<img class="card" src="' + myCard.getImageUrl() + '" alt="card image" />');
-
     // add the card to the current player's hand
     currentPlayerHand.cards.push(myCard);
 
-    // update the current player's point count
-    $('#' + handSelector + '-points').text(currentPlayerHand.getPoints());
+    // check if the current deal is a dealer hole card or not
+    if (!hole) {
+      cardImg = '<img class="card" src="' + myCard.getImageUrl() + '" alt="card image" />'
+      text = currentPlayerHand.getPoints();
+    } else {
+      cardImg = '<img id="dealer-hole-card" src="images/blue-card.png" alt="" />';
+      text = '???';
+    }
+
+    // render the image on the page
+    $("#"+ handSelector +"-hand").append(cardImg);
+
+    // update the current player's point count that is being displayed
+    $('#' + handSelector + '-points').text(text);
 
   }
 
@@ -151,7 +162,7 @@
 
   Game.prototype.dealerGetsBlackjack = function() {
     // check if dealer gets blackjack
-    if (this.dealerHand.points === 21) {
+    if (this.dealerHand.points === 21 && this.playerHand.points !== 21) {
       $('#messages').text("Blackjack! Dealer Wins!");
       $("#hit-button").prop('disabled', true);
     }
@@ -160,9 +171,22 @@
     $("#hit-button").prop('disabled', false);
   }
 
+  Game.prototype.flipDealerHoleCard = function() {
+    // remove dealer's hole card (back image)
+    $('#dealer-hole-card').remove();
+
+    // add dealer's hole card (front image)
+    $('#dealer-hand').append('<img class="card" src="' + this.dealerHand.cards[1].getImageUrl() + '" alt="card image" />');
+
+    // update dealer's points to display current points
+    $('#dealer-points').text(this.dealerHand.points);
+  }
+
   Game.prototype.hit = function() {
 
     this.myDeck.deal('player', this.playerHand);
+
+    this.flipDealerHoleCard();
 
     // check if player busted
     if (this.playerHand.getPoints() > 21) {
@@ -174,6 +198,8 @@
 
   Game.prototype.stand = function() {
     var message = "";
+
+    this.flipDealerHoleCard();
 
     // check if dealer has a minimum of 17
     if (this.dealerHand.getPoints() < 17) {
