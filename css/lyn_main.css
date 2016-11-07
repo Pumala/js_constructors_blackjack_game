@@ -8,10 +8,10 @@ body {
 }
 #table {
   height: 450px;
-  width: 100%;
-  background-color: brown;
+  max-width: 100%;
+  background-color: #216238;
   border-radius: 30%;
-  /*border: 3px solid #222;*/
+  border: 10px solid brown;
   margin: 50px auto;
 }
 
@@ -24,7 +24,10 @@ body {
   font-size: 1.5em;
   line-height: 60px;
 }
-label {
+h1 {
+  text-align: center;
+}
+label, h1 {
   color: #fff;
 }
 .user {
