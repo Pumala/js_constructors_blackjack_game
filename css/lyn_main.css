@@ -12,7 +12,7 @@ body {
   background-color: #216238;
   border-radius: 30%;
   border: 10px solid brown;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 #messages {
@@ -26,9 +26,13 @@ body {
 }
 h1 {
   text-align: center;
+  margin: 15px 0;
 }
 label, h1 {
   color: #fff;
+}
+label {
+  font-size: 1.15em;
 }
 .user {
   padding-left: 50px;
@@ -46,13 +50,14 @@ label, h1 {
 }
 
 button {
-  /*padding: 10px 15px;*/
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: #fff;
   border: none;
-  font-size: 1.25em;
+  font-size: 1.15em;
   transition: 0.3s;
   cursor: pointer;
+  padding: 10px 15px;
 }
 
 button:enabled:hover {
@@ -63,6 +68,10 @@ button:enabled:hover {
 
 button:focus {
   outline: none;
+}
+#reset-button {
+  display: block;
+  margin: auto;
 }
 
 /*************************
@@ -85,6 +94,9 @@ button:focus {
         MEDIA QUERIES
 *************************/
 @media screen and (min-width: 400px) {
+  #table {
+    margin: 40px auto;
+  }
   .card {
     height: 80px;
   }
@@ -93,6 +105,9 @@ button:focus {
   }
   #dealer-hand, #player-hand {
     height: 90px;
+  }
+  #reset-button {
+    display: inline-block;
   }
   label {
     font-size: 1.25em;
@@ -103,6 +118,9 @@ button:focus {
 }
 
 @media screen and (min-width: 575px) {
+  h1 {
+    font-size: 3em;
+  }
   #table {
     height: 500px;
   }
