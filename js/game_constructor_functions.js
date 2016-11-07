@@ -118,7 +118,7 @@
 
       text = currentPlayerHand.getPoints();
     } else {
-      cardImg = '<img id="dealer-hole-card" src="images/blue-card.png" alt="" />';
+      cardImg = '<img id="dealer-hole-card" src="images/xmas_card.png" alt="" />';
       text = '???';
     }
 
@@ -192,7 +192,7 @@
 
   Game.prototype.getWinner = function() {
     var message = "";
-    
+
     // determine the winner
     if (this.dealerHand.getPoints() === this.playerHand.getPoints()) {
       message = "It's a push!";
