@@ -22,26 +22,12 @@
       point = cardNames[point];
     }
 
-    console.log("card point: " + point);
-    console.log("card suit: " + suit);
-
-    // if (point === 11) {
-    //   point = 'jack';
-    // } else if (point === 12) {
-    //   point = 'queen';
-    // } else if (point === 13) {
-    //   point = 'king'
-    // } else if (point === 1) {
-    //   point = 'ace';
-    // }
-
     return 'images/' + point + '_of_' + suit + '.png';
   }
 
   // create Hand Constructor
   function Hand() {
     this.cards = [];
-    this.points = 0;
   }
 
   Hand.prototype.getPoints = function() {
@@ -49,7 +35,7 @@
     var counter = 0;
     var count_1 = false;
 
-    this.points = this.cards.reduce(function(totalPoints, card) {
+    var cardPoints = this.cards.reduce(function(totalPoints, card) {
       if (card.point > 10) {
         card.point = 10;
       }
@@ -63,73 +49,10 @@
           totalPoints += 10;
         }
       }
-      console.log("total points: " + totalPoints);
       return totalPoints;
     }, 0);
-    return this.points;
-    console.log("total points afterward: " + this.points);
+    return cardPoints;
   }
-    // console.log(this.cards);
-    // console.log("Hand: " + this.points);
-
-    // var cards = this.cards;
-    // var length = cards.length;
-    // var totalPoints = 0;
-    // var counter = 0;
-    // var count_1 = false;
-    //
-    // this.points = cards.map(function(card) {
-    // if (card.point > 10) {
-    //   card.point = 10;
-    // }
-    // counter++;
-    // if (card.point !== 1) {
-    //   totalPoints += card.point;
-    // } else {
-    //   count_1 = true;
-    // }
-    // if (counter === length) {
-    //   if (totalPoints <= 10 && count_1) {
-    //     card.point += 10;
-    //   }
-    // }
-    // return card.point
-    // }).reduce(function(a, b) {
-    //   return a + b;
-    // }, 0);
-
-    // console.log(this.cards);
-    // console.log("Hand after: " + this.points);
-
-    // var length = this.cards.length;
-    // var totalPoints = 0;
-    // var counter = 0;
-    // var count_1 = false;
-    // var index = "";
-    //
-    // this.points = this.cards.forEach(function(card) {
-    // if (card.point > 10) {
-    //   card.point = 10;
-    // }
-    // counter++;
-    // if (card.point !== 1) {
-    //   totalPoints += card.point;
-    // } else {
-    //   count_1 = true;
-    //   index = counter;
-    // }
-    // if (counter === length) {
-    //   if (totalPoints <= 10 && count_1) {
-    //     card[e];
-    //   ę
-    // }
-    // return totalPoints;
-  // });
-    // reduce(function(a, b) {
-    //   return a + b;
-    // }, 0);
-    // return this.points;
-  // }
 
   Hand.prototype.addCard = function(newCard) {
     this.cards.push({point: newCard.point, suit: newCard.suit});
@@ -191,9 +114,7 @@
 
     // check if the current deal is a dealer hole card or not
     if (!hole) {
-      cardImg = '<img class="card" src="' + myCard.getImageUrl() + '" alt="card image" />'
-      console.log("current points: " + currentPlayerHand.points);
-      console.log(currentPlayerHand.getPoints());
+      cardImg = '<img class="card" src="' + myCard.getImageUrl() + '" alt="card image" />';
 
       text = currentPlayerHand.getPoints();
     } else {
@@ -249,20 +170,15 @@
     // remove dealer's hole card (back image)
     $('#dealer-hole-card').remove();
 
-    console.log('Dealer points before reveal card hole: ' + this.dealerHand.getPoints());
-    console.log(this.dealerHand.cards[1].getImageUrl());
-
     // add dealer's hole card (front image)
     $('#dealer-hand').append('<img class="card" src="' + this.dealerHand.cards[1].getImageUrl() + '" alt="card image" />');
 
     // update dealer's points to display current points
     $('#dealer-points').text(this.dealerHand.getPoints());
-
-    console.log('revealed hole card: ' + this.dealerHand.getPoints());
   }
 
   Game.prototype.hit = function() {
-    // console.log("GET dealer deal POINTS: " + this.dealerHand.getPoints());
+
     this.myDeck.deal('player', this.playerHand);
 
     // check if player busted
@@ -273,31 +189,10 @@
     }
   }
 
-  Game.prototype.stand = function() {
 
-    console.log("GET dealer stand POINTS: " + this.dealerHand.getPoints());
-
+  Game.prototype.getWinner = function() {
     var message = "";
-
-    this.revealDealerHoleCard();
-
-    console.log(this.dealerHand.cards);
-
-    console.log("GET dealer stand reveal POINTS: " + this.dealerHand.getPoints());
-
-    // check if dealer has a minimum of 17
-    if (this.dealerHand.getPoints() < 17) {
-      while(this.dealerHand.getPoints() < 17) {
-        console.log('reached the while loop');
-        this.myDeck.deal('dealer', this.dealerHand);
-        $('#dealer-points').text(this.dealerHand.getPoints());
-
-      }
-    }
-
-    console.log("DEaler points min 17 stand: " + this.dealerHand.getPoints());
-
-
+    
     // determine the winner
     if (this.dealerHand.getPoints() === this.playerHand.getPoints()) {
       message = "It's a push!";
@@ -314,6 +209,24 @@
 
     // render message on the page
     $('#messages').text(message);
+  }
+
+  Game.prototype.stand = function() {
+
+    this.revealDealerHoleCard();
+
+    // check if dealer has a minimum of 17
+    if (this.dealerHand.getPoints() < 17) {
+      while(this.dealerHand.getPoints() < 17) {
+        console.log('reached the while loop');
+        this.myDeck.deal('dealer', this.dealerHand);
+        $('#dealer-points').text(this.dealerHand.getPoints());
+
+      }
+    }
+
+    // determine the winner
+    this.getWinner();
 
     // disable hit and stand buttons
     $("#hit-button").prop('disabled', true);

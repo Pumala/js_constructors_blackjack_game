@@ -18,7 +18,7 @@ body {
 #messages {
   width: 100%;
   height: 60px;
-  margin: 20px auto;
+  margin: 0;
   text-align: center;
   color: #fff;
   font-size: 1.5em;
@@ -28,7 +28,7 @@ label {
   color: #fff;
 }
 .user {
-  padding-left: 20px;
+  padding-left: 50px;
 }
 #dealer-hand, #player-hand {
   width: 90%;
@@ -76,4 +76,46 @@ button:focus {
   margin-top: 3px;
   margin-left: 5px;
   margin-right: -5px;
+}
+
+/*************************
+        MEDIA QUERIES
+*************************/
+@media screen and (min-width: 400px) {
+  .card {
+    height: 80px;
+  }
+  #dealer-hole-card {
+    width: 56px;
+  }
+  #dealer-hand, #player-hand {
+    height: 90px;
+  }
+  label {
+    font-size: 1.25em;
+  }
+  button {
+    padding: 15px 10px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  #table {
+    height: 500px;
+  }
+  .card {
+    height: 100px;
+  }
+  #dealer-hole-card {
+    width: 68px;
+  }
+  #dealer-hand, #player-hand {
+    height: 110px;
+  }
+  label {
+    font-size: 1.25em;
+  }
+  button {
+    padding: 20px 15px;
+  }
 }
