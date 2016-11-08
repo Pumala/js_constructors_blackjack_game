@@ -139,6 +139,7 @@
   Game.prototype.deal = function() {
     $("#hit-button").prop('disabled', false);
     $("#stand-button").prop('disabled', false);
+    $("#reset-button").prop('disabled', false);
 
     // generate a new deck of cards
     this.myDeck.newDeck();
@@ -266,6 +267,7 @@
     // disable stand buttons
     $("#hit-button").prop('disabled', true);
     $("#stand-button").prop('disabled', true);
+    $("#reset-button").prop('disabled', true);
   }
 
 // });
