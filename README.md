@@ -29,6 +29,18 @@ The goal is to beat the dealer with a better hand (meaning a hand totaling more 
 
 #### Screenshots
 
-1. Deal
+1. Deal 
 
-![blackjack_deal](static/blackjack_deal_1.png)
+![blackjack_deal](images/blackjack_deal_1.png)
+
+2. Hit
+
+![blackjack_hit](images/blackjack_hit_2.png)
+
+3. Stand
+
+![blackjack_stand](images/blackjack_stand_3.png)
+
+4. Reset
+
+![blackjack_reset](images/blackjack_reset_4.png)
