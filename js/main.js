@@ -1,3 +1,4 @@
+// create a new instance of Game
 var game = new Game();
 
 $("#deal-button").click(function() {

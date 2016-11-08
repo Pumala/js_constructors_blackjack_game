@@ -81,8 +81,11 @@
 
   Deck.prototype.draw = function() {
 
-    // draw the first card from the deck while removing it from the deck
-    var drawnCard = this.currentDeck.splice(0, 1);
+    // draw the first card from the deck
+    var drawnCard = this.currentDeck[0];
+
+    // remove the first card from the deck
+    this.currentDeck.splice(0, 1);
 
     return drawnCard;
   }
