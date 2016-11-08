@@ -115,7 +115,6 @@
     // check if the current deal is a dealer hole card or not
     if (!hole) {
       cardImg = '<img class="card" src="' + myCard.getImageUrl() + '" alt="card image" />';
-
       text = currentPlayerHand.getPoints();
     } else {
       cardImg = '<img id="dealer-hole-card" src="images/xmas_card.png" alt="" />';
@@ -138,6 +137,8 @@
   }
 
   Game.prototype.deal = function() {
+    $("#hit-button").prop('disabled', false);
+    $("#stand-button").prop('disabled', false);
 
     // generate a new deck of cards
     this.myDeck.newDeck();
@@ -151,19 +152,23 @@
     this.myDeck.deal('player', this.playerHand);
     this.myDeck.deal('dealer', this.dealerHand, 'hole');
 
-    this.dealerGetsBlackjack();
+    this.blackjackAnyone();
 
+    $("#deal-button").prop('disabled', true);
   }
 
-  Game.prototype.dealerGetsBlackjack = function() {
-    // check if dealer gets blackjack
-    if (this.dealerHand.points === 21 && this.playerHand.points !== 21) {
-      $('#messages').text("Blackjack! Dealer Wins!");
+  Game.prototype.blackjackAnyone = function() {
+    // check if dealer or player gets blackjack
+    if (this.playerHand.getPoints() === 21 || this.dealerHand.getPoints() === 21) {
+      if (this.playerHand.getPoints() === 21) {
+        $('#messages').text("BLACKJACK! Sweet!");
+      } else {
+        this.revealDealerHoleCard();
+        $('#messages').text("Dealer got a blackjack...");
+      }
       $("#hit-button").prop('disabled', true);
+      $("#stand-button").prop('disabled', true);
     }
-    $("#deal-button").prop('disabled', true);
-    $("#stand-button").prop('disabled', false);
-    $("#hit-button").prop('disabled', false);
   }
 
   Game.prototype.revealDealerHoleCard = function() {
@@ -183,12 +188,11 @@
 
     // check if player busted
     if (this.playerHand.getPoints() > 21) {
-      $('#messages').text("You busted!");
+      $('#messages').text("Oh no! You busted!");
       $("#hit-button").prop('disabled', true);
       $("#stand-button").prop('disabled', true);
     }
   }
-
 
   Game.prototype.getWinner = function() {
     var message = "";
@@ -197,14 +201,11 @@
     if (this.dealerHand.getPoints() === this.playerHand.getPoints()) {
       message = "It's a push!";
     } else if (this.dealerHand.getPoints() > 21) {
-      message = "Dealer busts!";
+      message = "Whew! The dealer busted!";
     } else if (this.dealerHand.getPoints() > this.playerHand.getPoints()) {
         message = "Dealer wins...";
     } else {
-      if (this.playerHand.getPoints() === 21) {
-        message = "Blackjack! ";
-      }
-      message += "You win!";
+      message = "Nice! You win!";
     }
 
     // render message on the page

@@ -1,18 +1,21 @@
 body {
   font-family: sans-serif;
-  background-color: black;
+  /*background-color: black;*/
+  background-image: url('../images/snowflakes.png');
 }
 .container {
   max-width: 700px;
   margin: auto;
 }
 #table {
-  height: 450px;
+  /*height: 450px;*/
   max-width: 100%;
   background-color: #216238;
-  border-radius: 30%;
+  border-radius: 0 0 35% 35%;
   border: 10px solid brown;
-  margin: 20px auto;
+  margin: -80px auto 0 auto;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 #messages {
@@ -20,9 +23,10 @@ body {
   height: 60px;
   margin: 0;
   text-align: center;
-  color: #fff;
-  font-size: 1.5em;
+  color: #ca3a3a;
+  font-size: 1.25em;
   line-height: 60px;
+  font-weight: bold;
 }
 h1 {
   text-align: center;
@@ -32,7 +36,7 @@ label, h1 {
   color: #fff;
 }
 label {
-  font-size: 1.15em;
+  font-size: 1.1em;
 }
 .user {
   padding-left: 50px;
@@ -95,7 +99,14 @@ button:focus {
 *************************/
 @media screen and (min-width: 400px) {
   #table {
-    margin: 40px auto;
+    padding-top: 75px;
+    margin-top: -95px;
+  }
+  h1 {
+    font-size: 2.25em;
+  }
+  #messages {
+    font-size: 1.5em;
   }
   .card {
     height: 80px;
@@ -121,8 +132,11 @@ button:focus {
   h1 {
     font-size: 3em;
   }
+  #messages {
+    font-size: 2em;
+  }
   #table {
-    height: 500px;
+    padding-bottom: 50px;
   }
   .card {
     height: 100px;
