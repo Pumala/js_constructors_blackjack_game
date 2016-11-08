@@ -162,7 +162,7 @@
     // check if dealer or player gets blackjack
     if (this.playerHand.getPoints() === 21 || this.dealerHand.getPoints() === 21) {
       if (this.playerHand.getPoints() === 21) {
-        $('#messages').text("BLACKJACK! Sweet!");
+        $('#messages').text("BLACKJACK! SWEET!");
       } else {
         this.revealDealerHoleCard();
         $('#messages').text("Dealer got a blackjack...");

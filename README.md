@@ -25,3 +25,10 @@ The goal is to beat the dealer with a better hand (meaning a hand totaling more 
 2. Click on the hit button to draw another card (the choice is yours)
 3. Click on the stand button when you do not want to draw anymore cards
 4. Click on the reset button to begin a new game
+
+
+#### Screenshots
+
+1. Deal
+
+![blackjack_deal](static/blackjack_deal_1.png)
