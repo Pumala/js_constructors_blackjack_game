@@ -80,8 +80,9 @@
   }
 
   Deck.prototype.draw = function() {
-    var drawnCard = this.currentDeck[0];
-    this.currentDeck.splice(0, 1);
+
+    // draw the first card from the deck while removing it from the deck
+    var drawnCard = this.currentDeck.splice(0, 1);
 
     return drawnCard;
   }
@@ -137,6 +138,7 @@
   }
 
   Game.prototype.deal = function() {
+    // once the deal button has been clicked, undisable the other buttons
     $("#hit-button").prop('disabled', false);
     $("#stand-button").prop('disabled', false);
     $("#reset-button").prop('disabled', false);
@@ -153,8 +155,10 @@
     this.myDeck.deal('player', this.playerHand);
     this.myDeck.deal('dealer', this.dealerHand, 'hole');
 
+    // check if dealer or player gets blackjack
     this.blackjackAnyone();
 
+    // disable the deal button once everyone has been dealt 2 cards each
     $("#deal-button").prop('disabled', true);
   }
 
