@@ -4,7 +4,7 @@
 create a blackjack game implementing object oriented programming (OOP) in javascript
 #### Live Demo:
 
-[Xmas Blackjack Game] (http://xmasblackjack.surge.sh/)
+[Xmas Blackjack Game] (http://iamclamclam.com/xmasblackjack/)
 
 #### Languages used:
 
