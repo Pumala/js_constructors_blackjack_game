@@ -1,0 +1,705 @@
+Last login: Sun Nov 27 15:56:53 on ttys001
+~: cd DigitalCrafts/week10/
+~/DigitalCrafts/week10: ls
+11-14   11-15   11-16   11-17   11-18
+~/DigitalCrafts/week10: cd 11-16/
+~/DigitalCrafts/week10/11-16: ls
+movie_app_github        movie_movie_before_changes
+movie_app_original
+~/DigitalCrafts/week10/11-16: cd movie_app_github/
+~/DigitalCrafts/week10/11-16/movie_app_github: ls
+css         index.html      movie_details.html
+home.html       js          search_results.html
+~/DigitalCrafts/week10/11-16/movie_app_github: serve
+serving /Users/tmoney/DigitalCrafts/week10/11-16/movie_app_github on port 3000
+GET / 304 10ms
+GET /css/style.css 304 4ms
+GET /js/angular.js 304 1ms
+GET /js/angular-ui-router.js 304 1ms
+GET /js/movieapp.js 304 1ms
+GET /home.html 304 0ms
+GET / 200 7ms - 2.61kb
+GET /js/angular.js 304 1ms
+GET /css/style.css 304 3ms
+GET /js/angular-ui-router.js 304 0ms
+GET /js/movieapp.js 304 0ms
+GET /home.html 304 0ms
+GET / 200 7ms - 2.62kb
+GET /css/style.css 304 6ms
+GET /js/angular.js 304 5ms
+GET /js/angular-ui-router.js 304 4ms
+GET /js/movieapp.js 200 7ms - 5.63kb
+GET /css/style.css 304 1ms
+GET / 200 1ms - 2.62kb
+GET /css/style.css 200 8ms - 4.32kb
+GET /js/movieapp.js 200 4ms - 5.63kb
+GET /js/angular-ui-router.js 200 7ms - 168.87kb
+GET /js/angular.js 200 29ms - 1.1mb
+GET / 200 1ms - 2.62kb
+GET /js/movieapp.js 200 3ms - 5.65kb
+GET /css/style.css 200 5ms - 4.32kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 12ms - 1.1mb
+GET /home.html 200 3ms - 340
+GET /now_playing.html 200 3ms - 26
+GET / 200 6ms - 2.62kb
+GET /js/movieapp.js 200 9ms - 5.65kb
+GET /css/style.css 200 13ms - 4.32kb
+GET /js/angular-ui-router.js 200 17ms - 168.87kb
+GET /js/angular.js 200 46ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.44kb
+GET / 200 2ms - 2.62kb
+GET /js/movieapp.js 200 2ms - 5.68kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 12ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.44kb
+GET / 200 3ms - 2.62kb
+GET /js/movieapp.js 200 3ms - 5.68kb
+GET /css/style.css 200 5ms - 4.32kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 34ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.45kb
+GET / 200 1ms - 2.62kb
+GET /js/movieapp.js 200 1ms - 5.68kb
+GET /css/style.css 200 3ms - 4.32kb
+GET /js/angular-ui-router.js 200 6ms - 168.87kb
+GET /js/angular.js 200 36ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.42kb
+GET / 304 1ms
+GET /css/style.css 304 2ms
+GET /js/angular.js 304 1ms
+GET /js/angular-ui-router.js 304 1ms
+GET /js/movieapp.js 304 2ms
+GET /now_playing.html 200 3ms - 2.46kb
+GET / 304 1ms
+GET /css/style.css 304 2ms
+GET /js/angular.js 304 2ms
+GET /js/angular-ui-router.js 304 1ms
+GET /js/movieapp.js 200 2ms - 6.29kb
+GET /home.html 304 1ms
+GET /now_playing.html 200 4ms - 2.37kb
+GET /search_results.html 304 1ms
+GET /css/style.css 304 1ms
+GET / 200 11ms - 2.62kb
+GET /js/movieapp.js 200 5ms - 6.34kb
+GET /css/style.css 200 9ms - 4.32kb
+GET /js/angular-ui-router.js 200 12ms - 168.87kb
+GET /js/angular.js 200 42ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.37kb
+GET / 304 1ms
+GET /css/style.css 304 0ms
+GET /js/angular.js 304 1ms
+GET /js/angular-ui-router.js 304 1ms
+GET /js/movieapp.js 304 1ms
+GET / 200 2ms - 2.62kb
+GET /css/style.css 200 3ms - 4.32kb
+GET /js/movieapp.js 200 3ms - 6.34kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 13ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET /now_playing.html 200 3ms - 2.37kb
+GET / 304 0ms
+GET /css/style.css 304 1ms
+GET /js/angular.js 304 1ms
+GET / 200 0ms - 2.62kb
+GET /js/movieapp.js 200 31ms - 6.32kb
+GET /css/style.css 200 37ms - 4.32kb
+GET /js/angular-ui-router.js 200 34ms - 168.87kb
+GET /js/angular.js 200 47ms - 1.1mb
+GET /home.html 200 3ms - 340
+GET /now_playing.html 200 3ms - 2.37kb
+GET / 200 1ms - 2.62kb
+GET /css/style.css 200 6ms - 4.32kb
+GET /js/movieapp.js 200 4ms - 6.32kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 34ms - 1.1mb
+GET /now_playing.html 200 3ms - 2.37kb
+GET / 200 2ms - 2.62kb
+GET /css/style.css 200 3ms - 4.32kb
+GET /js/movieapp.js 200 2ms - 6.37kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 34ms - 1.1mb
+GET /now_playing.html 200 0ms - 2.37kb
+GET / 200 1ms - 2.62kb
+GET /js/movieapp.js 200 2ms - 6.37kb
+GET /css/style.css 200 3ms - 4.32kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 11ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET /now_playing.html 200 1ms - 2.37kb
+GET / 200 1ms - 2.62kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/movieapp.js 200 3ms - 6.39kb
+GET /js/angular-ui-router.js 200 4ms - 168.87kb
+GET /js/angular.js 200 13ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET /now_playing.html 200 1ms - 2.37kb
+GET / 200 1ms - 2.62kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/movieapp.js 200 4ms - 6.4kb
+GET /js/angular-ui-router.js 200 6ms - 168.87kb
+GET /js/angular.js 200 35ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET /now_playing.html 200 0ms - 2.37kb
+GET / 200 6ms - 2.62kb
+GET /css/style.css 200 29ms - 4.32kb
+GET /js/movieapp.js 200 3ms - 6.45kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 19ms - 1.1mb
+GET /home.html 200 4ms - 340
+GET /now_playing.html 200 2ms - 2.37kb
+GET / 200 1ms - 2.62kb
+GET /js/movieapp.js 200 1ms - 6.48kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/angular-ui-router.js 200 6ms - 168.87kb
+GET /js/angular.js 200 11ms - 1.1mb
+GET /home.html 200 4ms - 340
+GET /now_playing.html 200 1ms - 2.37kb
+GET / 200 1ms - 2.64kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/movieapp.js 200 2ms - 6.49kb
+GET /js/angular-ui-router.js 200 4ms - 168.87kb
+GET /js/angular.js 200 32ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.37kb
+GET / 200 0ms - 2.64kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/movieapp.js 200 2ms - 6.49kb
+GET /js/angular-ui-router.js 200 4ms - 168.87kb
+GET /js/angular.js 200 31ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET / 200 1ms - 2.64kb
+GET /css/style.css 200 3ms - 4.32kb
+GET /js/movieapp.js 200 2ms - 6.49kb
+GET /js/angular-ui-router.js 200 3ms - 168.87kb
+GET /js/angular.js 200 11ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET /now_playing.html 200 1ms - 2.37kb
+GET / 200 1ms - 2.64kb
+GET /css/style.css 200 6ms - 4.32kb
+GET /js/movieapp.js 200 3ms - 6.51kb
+GET /js/angular-ui-router.js 200 7ms - 168.87kb
+GET /js/angular.js 200 32ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.37kb
+GET /search_results.html 200 2ms - 2.45kb
+GET / 200 2ms - 2.64kb
+GET /js/movieapp.js 200 3ms - 6.51kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/angular-ui-router.js 200 4ms - 168.87kb
+GET /js/angular.js 200 33ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.46kb
+GET / 200 1ms - 2.64kb
+GET /js/movieapp.js 200 2ms - 6.51kb
+GET /css/style.css 200 3ms - 4.32kb
+GET /js/angular-ui-router.js 200 4ms - 168.87kb
+GET /js/angular.js 200 28ms - 1.1mb
+GET /now_playing.html 200 0ms - 2.38kb
+GET / 200 1ms - 2.64kb
+GET /css/style.css 200 4ms - 4.32kb
+GET /js/movieapp.js 200 2ms - 6.51kb
+GET /js/angular-ui-router.js 200 4ms - 168.87kb
+GET /js/angular.js 200 10ms - 1.1mb
+GET /now_playing.html 200 0ms - 2.38kb
+GET / 200 1ms - 2.64kb
+GET /css/style.css 200 2ms - 4.32kb
+GET /js/movieapp.js 200 1ms - 6.51kb
+GET /js/angular-ui-router.js 200 3ms - 168.87kb
+GET /js/angular.js 200 10ms - 1.1mb
+GET /now_playing.html 200 2ms - 2.37kb
+GET /search_results.html 200 1ms - 2.45kb
+GET /home.html 200 9ms - 340
+GET / 200 1ms - 2.64kb
+GET /js/movieapp.js 200 3ms - 6.47kb
+GET /css/style.css 200 5ms - 4.32kb
+GET /js/angular-ui-router.js 200 8ms - 168.87kb
+GET /js/angular.js 200 40ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET /now_playing.html 200 5ms - 2.37kb
+GET /movie_details.html 200 1ms - 2.55kb
+^C
+~/DigitalCrafts/week10/11-16/movie_app_github:
+~/DigitalCrafts/week10/11-16/movie_app_github: git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   css/style.css
+    modified:   index.html
+    deleted:    js/home.html
+    modified:   js/movieapp.js
+    modified:   movie_details.html
+    modified:   search_results.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    home.html
+    now_playing.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/DigitalCrafts/week10/11-16/movie_app_github: git add .
+~/DigitalCrafts/week10/11-16/movie_app_github: git commit
+[master 747694d] feature now playing movies link
+ 8 files changed, 119 insertions(+), 90 deletions(-)
+ create mode 100644 home.html
+ delete mode 100644 js/home.html
+ create mode 100644 now_playing.html
+~/DigitalCrafts/week10/11-16/movie_app_github: git push
+Counting objects: 11, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 1.45 KiB | 0 bytes/s, done.
+Total 11 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 6 local objects.
+To https://github.com/Pumala/movie_app.git
+   83624af..747694d  master -> master
+~/DigitalCrafts/week10/11-16/movie_app_github: serve
+serving /Users/tmoney/DigitalCrafts/week10/11-16/movie_app_github on port 3000
+GET / 200 11ms - 2.64kb
+GET /js/movieapp.js 200 5ms - 5.21kb
+GET /css/style.css 200 10ms - 4.32kb
+GET /js/angular-ui-router.js 200 8ms - 168.87kb
+GET /js/angular.js 200 33ms - 1.1mb
+GET /home.html 200 3ms - 340
+GET /search_results.html 304 3ms
+GET / 304 1ms
+GET /js/angular.js 304 5ms
+GET /js/angular-ui-router.js 304 2ms
+GET /js/movieapp.js 304 3ms
+GET /css/style.css 200 13ms - 4.36kb
+GET /search_results.html 304 1ms
+GET / 304 1ms
+GET /css/style.css 304 1ms
+GET /js/angular.js 304 2ms
+GET /js/angular-ui-router.js 304 2ms
+GET /js/movieapp.js 304 2ms
+GET /search_results.html 200 3ms - 2.45kb
+GET /now_playing.html 200 1ms - 2.26kb
+GET /css/style.css 304 1ms
+GET / 200 1ms - 2.64kb
+GET /js/movieapp.js 200 4ms - 5.21kb
+GET /css/style.css 200 7ms - 4.36kb
+GET /js/angular-ui-router.js 200 7ms - 168.87kb
+GET /js/angular.js 200 35ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.28kb
+GET / 200 1ms - 2.64kb
+GET /js/movieapp.js 200 4ms - 5.21kb
+GET /css/style.css 200 7ms - 4.36kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 33ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.28kb
+GET / 200 3ms - 2.64kb
+GET /js/movieapp.js 200 3ms - 5.21kb
+GET /css/style.css 200 6ms - 4.36kb
+GET /js/angular-ui-router.js 200 7ms - 168.87kb
+GET /js/angular.js 200 34ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.26kb
+GET /search_results.html 200 3ms - 2.35kb
+GET / 200 0ms - 2.64kb
+GET /js/movieapp.js 200 3ms - 5.21kb
+GET /css/style.css 200 6ms - 4.36kb
+GET /js/angular-ui-router.js 200 7ms - 168.87kb
+GET /js/angular.js 200 36ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET /now_playing.html 200 1ms - 2.26kb
+GET /movie_details.html 200 2ms - 2.55kb
+GET / 200 2ms - 2.64kb
+GET /js/movieapp.js 200 1ms - 5.21kb
+GET /css/style.css 200 3ms - 4.36kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 28ms - 1.1mb
+GET /movie_details.html 200 2ms - 2.55kb
+GET /now_playing.html 200 2ms - 2.26kb
+GET / 200 3ms - 2.64kb
+GET /js/movieapp.js 200 4ms - 5.21kb
+GET /css/style.css 200 10ms - 4.36kb
+GET /js/angular-ui-router.js 200 15ms - 168.87kb
+GET /js/angular.js 200 37ms - 1.1mb
+GET /movie_details.html 200 2ms - 2.58kb
+GET / 200 2ms - 2.64kb
+GET /css/style.css 200 8ms - 4.36kb
+GET /js/movieapp.js 200 6ms - 5.21kb
+GET /js/angular-ui-router.js 200 7ms - 168.87kb
+GET /js/angular.js 200 13ms - 1.1mb
+GET /movie_details.html 200 1ms - 2.58kb
+GET / 200 2ms - 2.64kb
+GET /css/style.css 200 5ms - 4.36kb
+GET /js/movieapp.js 200 3ms - 5.21kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 32ms - 1.1mb
+GET /movie_details.html 200 1ms - 2.61kb
+GET /now_playing.html 200 2ms - 2.26kb
+GET / 200 1ms - 2.64kb
+GET /css/style.css 200 13ms - 4.36kb
+GET /js/movieapp.js 200 11ms - 5.21kb
+GET /js/angular-ui-router.js 200 13ms - 168.87kb
+GET /js/angular.js 200 39ms - 1.1mb
+GET /movie_details.html 200 3ms - 2.61kb
+GET / 200 2ms - 2.64kb
+GET /js/movieapp.js 200 3ms - 5.21kb
+GET /css/style.css 200 7ms - 4.36kb
+GET /js/angular-ui-router.js 200 8ms - 168.87kb
+GET /js/angular.js 200 41ms - 1.1mb
+GET /movie_details.html 200 1ms - 2.61kb
+GET /home.html 200 2ms - 340
+GET /search_results.html 200 1ms - 2.35kb
+GET / 200 3ms - 2.64kb
+GET /js/movieapp.js 200 3ms - 5.21kb
+GET /css/style.css 200 6ms - 3.72kb
+GET /js/angular-ui-router.js 200 6ms - 168.87kb
+GET /js/angular.js 200 37ms - 1.1mb
+GET /home.html 200 2ms - 340
+GET / 200 5ms - 2.64kb
+GET /js/movieapp.js 200 3ms - 5.21kb
+GET /css/style.css 200 9ms - 3.8kb
+GET /js/angular-ui-router.js 200 6ms - 168.87kb
+GET /js/angular.js 200 44ms - 1.1mb
+GET /home.html 200 4ms - 340
+GET /now_playing.html 200 1ms - 2.26kb
+GET / 200 3ms - 2.64kb
+GET /css/style.css 200 5ms - 3.8kb
+GET /js/movieapp.js 200 2ms - 5.21kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 40ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.26kb
+GET / 200 2ms - 2.64kb
+GET /css/style.css 200 6ms - 3.83kb
+GET /js/movieapp.js 200 2ms - 5.21kb
+GET /js/angular-ui-router.js 200 8ms - 168.87kb
+GET /js/angular.js 200 37ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.26kb
+GET / 200 0ms - 2.64kb
+GET /js/movieapp.js 200 23ms - 5.21kb
+GET /css/style.css 200 25ms - 3.8kb
+GET /js/angular-ui-router.js 200 28ms - 168.87kb
+GET /js/angular.js 200 35ms - 1.1mb
+GET /now_playing.html 200 1ms - 2.26kb
+GET /search_results.html 200 1ms - 2.35kb
+GET /home.html 200 3ms - 340
+GET / 200 1ms - 2.64kb
+GET /js/movieapp.js 200 1ms - 5.21kb
+GET /css/style.css 200 3ms - 3.8kb
+GET /js/angular-ui-router.js 200 5ms - 168.87kb
+GET /js/angular.js 200 12ms - 1.1mb
+GET /home.html 200 1ms - 385
+GET / 200 1ms - 2.64kb
+GET /css/style.css 200 13ms - 3.8kb
+GET /js/movieapp.js 200 9ms - 5.21kb
+GET /js/angular-ui-router.js 200 13ms - 168.87kb
+GET /js/angular.js 200 24ms - 1.1mb
+GET /home.html 200 1ms - 340
+GET /search_results.html 200 2ms - 2.35kb
+GET /movie_details.html 200 1ms - 2.61kb
+GET /now_playing.html 200 1ms - 2.26kb
+^C
+~/DigitalCrafts/week10/11-16/movie_app_github:
+~/DigitalCrafts/week10/11-16/movie_app_github: touch README.md
+~/DigitalCrafts/week10/11-16/movie_app_github: ls
+README.md       index.html      now_playing.html
+css         js          search_results.html
+home.html       movie_details.html
+~/DigitalCrafts/week10/11-16/movie_app_github: serve
+serving /Users/tmoney/DigitalCrafts/week10/11-16/movie_app_github on port 3000
+^C
+~/DigitalCrafts/week10/11-16/movie_app_github:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~/DigitalCrafts/week10/11-16/movie_app_github: git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   css/style.css
+    modified:   js/movieapp.js
+    modified:   movie_details.html
+    modified:   now_playing.html
+    modified:   search_results.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    README.md
+    images/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/DigitalCrafts/week10/11-16/movie_app_github: git add .
+~/DigitalCrafts/week10/11-16/movie_app_github: git commit
+[master 5d21069] add content to README.md file
+ 11 files changed, 113 insertions(+), 73 deletions(-)
+ create mode 100644 README.md
+ create mode 100644 images/home.png
+ create mode 100644 images/movie_details.png
+ create mode 100644 images/now_1.png
+ create mode 100644 images/results_1.png
+ create mode 100644 images/results_2.png
+~/DigitalCrafts/week10/11-16/movie_app_github: git push
+Counting objects: 16, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (16/16), 9.19 MiB | 93.00 KiB/s, done.
+Total 16 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/Pumala/movie_app.git
+   747694d..5d21069  master -> master
+~/DigitalCrafts/week10/11-16/movie_app_github:
+~/DigitalCrafts/week10/11-16/movie_app_github:
+~/DigitalCrafts/week10/11-16/movie_app_github: git add .
+~/DigitalCrafts/week10/11-16/movie_app_github: git commit
+[master d107575] correct some grammatical errors in the README.md file
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+~/DigitalCrafts/week10/11-16/movie_app_github: git push
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 377 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Pumala/movie_app.git
+   5d21069..d107575  master -> master
+~/DigitalCrafts/week10/11-16/movie_app_github:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~/DigitalCrafts/week10/11-16/movie_app_github: cd ~
+~: login_aws
+Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-92-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Nov 27 21:01:36 UTC 2016
+
+  System load:  0.0               Processes:           107
+  Usage of /:   16.1% of 7.74GB   Users logged in:     0
+  Memory usage: 14%               IP address for eth0: 172.31.47.237
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+76 packages can be updated.
+43 updates are security updates.
+
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Sun Nov 27 21:01:36 2016 from 23-118-134-62.lightspeed.tukrga.sbcglobal.net
+ubuntu@ip-172-31-47-237:~$
+
+
+
+ubuntu@ip-172-31-47-237:~$ cd /var/log
+ubuntu@ip-172-31-47-237:/var/log$ ls
+alternatives.log    btmp                   kern.log     syslog.5.gz
+alternatives.log.1  btmp.1                 kern.log.1   syslog.6.gz
+apache2             cloud-init.log         landscape    syslog.7.gz
+apt                 cloud-init-output.log  lastlog      sysstat
+auth.log            dist-upgrade           postgresql   udev
+auth.log.1          dmesg                  syslog       unattended-upgrades
+auth.log.2.gz       dmesg.0                syslog.1     upstart
+auth.log.3.gz       dpkg.log               syslog.2.gz  wtmp
+auth.log.4.gz       dpkg.log.1             syslog.3.gz  wtmp.1
+boot.log            fsck                   syslog.4.gz
+ubuntu@ip-172-31-47-237:/var/log$ cd apache2
+ubuntu@ip-172-31-47-237:/var/log/apache2$ ls
+access.log       access.log.4.gz  error.log.1     error.log.5.gz
+access.log.1     access.log.5.gz  error.log.2.gz  error.log.6.gz
+access.log.2.gz  access.log.6.gz  error.log.3.gz  other_vhosts_access.log
+access.log.3.gz  error.log        error.log.4.gz
+ubuntu@ip-172-31-47-237:/var/log/apache2$ tail -f error.log
+[Mon Nov 28 20:49:08.331830 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913] Traceback (most recent call last):, referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331847 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913]   File "/var/www/python_wiki_app_redo/wsgi.py", line 11, in <module>, referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331868 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913]     from server import app as application, referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331874 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913]   File "/var/www/python_wiki_app_redo/server.py", line 14, in <module>, referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331883 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913]     passwd=os.environ.get('PG_PASSWORD'), referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331888 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1385, in __init__, referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331898 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913]     db = connect(*args, **kw), referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331912 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913] InternalError: FATAL:  password authentication failed for user "tmoney", referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331914 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913] FATAL:  password authentication failed for user "tmoney", referer: http://wikiapp.tech/
+[Mon Nov 28 20:49:08.331916 2016] [:error] [pid 3357:tid 140564120979200] [client 64.124.76.250:58913] , referer: http://wikiapp.tech/
+
+
+
+
+
+
+
+
+[Mon Nov 28 20:51:18.790096 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051] mod_wsgi (pid=3357): Target WSGI script '/var/www/python_wiki_app_redo/wsgi.py' cannot be loaded as Python module.
+[Mon Nov 28 20:51:18.790190 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051] mod_wsgi (pid=3357): Exception occurred processing WSGI script '/var/www/python_wiki_app_redo/wsgi.py'.
+[Mon Nov 28 20:51:18.790254 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051] Traceback (most recent call last):
+[Mon Nov 28 20:51:18.790326 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051]   File "/var/www/python_wiki_app_redo/wsgi.py", line 11, in <module>
+[Mon Nov 28 20:51:18.790393 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051]     from server import app as application
+[Mon Nov 28 20:51:18.790442 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051]   File "/var/www/python_wiki_app_redo/server.py", line 14, in <module>
+[Mon Nov 28 20:51:18.790500 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051]     passwd=os.environ.get('PG_PASSWORD')
+[Mon Nov 28 20:51:18.790549 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1385, in __init__
+[Mon Nov 28 20:51:18.790594 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051]     db = connect(*args, **kw)
+[Mon Nov 28 20:51:18.790656 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051] InternalError: FATAL:  password authentication failed for user "tmoney"
+[Mon Nov 28 20:51:18.790688 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051] FATAL:  password authentication failed for user "tmoney"
+[Mon Nov 28 20:51:18.790711 2016] [:error] [pid 3357:tid 140564104193792] [client 64.124.76.250:59051]
+[Mon Nov 28 20:51:18.962442 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] mod_wsgi (pid=3358): Target WSGI script '/var/www/python_wiki_app_redo/wsgi.py' cannot be loaded as Python module., referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962545 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] mod_wsgi (pid=3358): Exception occurred processing WSGI script '/var/www/python_wiki_app_redo/wsgi.py'., referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962602 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] Traceback (most recent call last):, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962651 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]   File "/var/www/python_wiki_app_redo/wsgi.py", line 11, in <module>, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962717 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]     from server import app as application, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962762 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]   File "/var/www/python_wiki_app_redo/server.py", line 14, in <module>, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962806 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]     passwd=os.environ.get('PG_PASSWORD'), referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962843 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1385, in __init__, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962886 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]     db = connect(*args, **kw), referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962933 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] InternalError: FATAL:  password authentication failed for user "tmoney", referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962980 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] FATAL:  password authentication failed for user "tmoney", referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.963005 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] , referer: http://wikiapp.tech/
+^C
+ubuntu@ip-172-31-47-237:/var/log/apache2$
+ubuntu@ip-172-31-47-237:/var/log/apache2$ cd /etc/apache2/sites-available
+ubuntu@ip-172-31-47-237:/etc/apache2/sites-available$ cd /var/www
+ubuntu@ip-172-31-47-237:/var/www$ ls
+e_commerce_project  html  involved  python_wiki_app_redo
+ubuntu@ip-172-31-47-237:/var/www$ cd python_wiki_app_redo/
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ ls
+README.md       server.py  structure.sql  wiki_linkify.py   wsgi.py
+server_orig.py  static     templates      wiki_linkify.pyc
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ git pull
+remote: Counting objects: 29, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 29 (delta 17), reused 11 (delta 11), pack-reused 4
+Unpacking objects: 100% (29/29), done.
+From https://github.com/Pumala/python_wiki_app_redo
+   be91312..8dd76e8  master     -> origin/master
+Updating be91312..8dd76e8
+Fast-forward
+ README.md                 | 62 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ server.py                 |  4 ++--
+ static/main.css           | 31 +++++++++++++++++++++++--------
+ templates/homepage.html   |  5 +++--
+ templates/login.html      |  4 ++--
+ templates/pageholder.html | 28 ++++++++++++++++++++++++++--
+ templates/register.html   |  4 ++--
+ 7 files changed, 115 insertions(+), 23 deletions(-)
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ ls
+README.md       server.py  structure.sql  wiki_linkify.py   wsgi.py
+server_orig.py  static     templates      wiki_linkify.pyc
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ less wsgi.py
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ sudo service apache2 reload
+ * Reloading web server apache2                                                                                    *
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ tail -f /var/log/apache2/error.log
+[Mon Nov 28 20:59:20.618115 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Mon Nov 28 20:59:20.618145 2016] [:error] [pid 8814:tid 140564230420224]     return self.view_functions[rule.endpoint](**req.view_args)
+[Mon Nov 28 20:59:20.618163 2016] [:error] [pid 8814:tid 140564230420224]   File "/var/www/involved/server.py", line 248, in view_projects
+[Mon Nov 28 20:59:20.618181 2016] [:error] [pid 8814:tid 140564230420224]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc')
+[Mon Nov 28 20:59:20.618201 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query
+[Mon Nov 28 20:59:20.618220 2016] [:error] [pid 8814:tid 140564230420224]     return self.db.query(command)
+[Mon Nov 28 20:59:20.618240 2016] [:error] [pid 8814:tid 140564230420224] ProgrammingError: ERROR:  relation "project" does not exist
+[Mon Nov 28 20:59:20.618256 2016] [:error] [pid 8814:tid 140564230420224] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o...
+[Mon Nov 28 20:59:20.618271 2016] [:error] [pid 8814:tid 140564230420224]                                                              ^
+[Mon Nov 28 20:59:20.618286 2016] [:error] [pid 8814:tid 140564230420224]
+
+
+
+
+
+
+
+
+
+
+[Mon Nov 28 21:05:57.082615 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146] [2016-11-28 21:05:57,082] ERROR in app: Exception on /projects [GET], referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082636 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146] Traceback (most recent call last):, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082640 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082647 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]     response = self.full_dispatch_request(), referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082650 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082653 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]     rv = self.handle_user_exception(e), referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082656 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082658 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]     reraise(exc_type, exc_value, tb), referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082661 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082672 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]     rv = self.dispatch_request(), referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082675 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082677 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082679 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]   File "/var/www/involved/server.py", line 248, in view_projects, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082682 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc'), referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082685 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082687 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]     return self.db.query(command), referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082689 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146] ProgrammingError: ERROR:  relation "project" does not exist, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082691 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o..., referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082693 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146]                                                              ^, referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082695 2016] [:error] [pid 8814:tid 140564120979200] [client 64.124.76.250:59146] , referer: http://involved.tech/
+[Mon Nov 28 21:05:57.082745 2016] [:error] [pid 8814:tid 140564120979200] ERROR:if_you_care:Exception on /projects [GET]
+[Mon Nov 28 21:05:57.082749 2016] [:error] [pid 8814:tid 140564120979200] Traceback (most recent call last):
+[Mon Nov 28 21:05:57.082751 2016] [:error] [pid 8814:tid 140564120979200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Mon Nov 28 21:05:57.082753 2016] [:error] [pid 8814:tid 140564120979200]     response = self.full_dispatch_request()
+[Mon Nov 28 21:05:57.082755 2016] [:error] [pid 8814:tid 140564120979200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Mon Nov 28 21:05:57.082757 2016] [:error] [pid 8814:tid 140564120979200]     rv = self.handle_user_exception(e)
+[Mon Nov 28 21:05:57.082759 2016] [:error] [pid 8814:tid 140564120979200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Mon Nov 28 21:05:57.082761 2016] [:error] [pid 8814:tid 140564120979200]     reraise(exc_type, exc_value, tb)
+[Mon Nov 28 21:05:57.082763 2016] [:error] [pid 8814:tid 140564120979200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Mon Nov 28 21:05:57.082765 2016] [:error] [pid 8814:tid 140564120979200]     rv = self.dispatch_request()
+[Mon Nov 28 21:05:57.082767 2016] [:error] [pid 8814:tid 140564120979200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Mon Nov 28 21:05:57.082769 2016] [:error] [pid 8814:tid 140564120979200]     return self.view_functions[rule.endpoint](**req.view_args)
+[Mon Nov 28 21:05:57.082777 2016] [:error] [pid 8814:tid 140564120979200]   File "/var/www/involved/server.py", line 248, in view_projects
+[Mon Nov 28 21:05:57.082779 2016] [:error] [pid 8814:tid 140564120979200]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc')
+[Mon Nov 28 21:05:57.082782 2016] [:error] [pid 8814:tid 140564120979200]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query
+[Mon Nov 28 21:05:57.082784 2016] [:error] [pid 8814:tid 140564120979200]     return self.db.query(command)
+[Mon Nov 28 21:05:57.082786 2016] [:error] [pid 8814:tid 140564120979200] ProgrammingError: ERROR:  relation "project" does not exist
+[Mon Nov 28 21:05:57.082788 2016] [:error] [pid 8814:tid 140564120979200] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o...
+[Mon Nov 28 21:05:57.082790 2016] [:error] [pid 8814:tid 140564120979200]                                                              ^
+[Mon Nov 28 21:05:57.082792 2016] [:error] [pid 8814:tid 140564120979200]
+^C
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ sudo service apache2 restart
+ * Restarting web server apache2                                                                                                                                                          [ OK ]
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$ tail -f /var/log/apache2/error.log
+[Mon Nov 28 21:05:57.082779 2016] [:error] [pid 8814:tid 140564120979200]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc')
+[Mon Nov 28 21:05:57.082782 2016] [:error] [pid 8814:tid 140564120979200]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query
+[Mon Nov 28 21:05:57.082784 2016] [:error] [pid 8814:tid 140564120979200]     return self.db.query(command)
+[Mon Nov 28 21:05:57.082786 2016] [:error] [pid 8814:tid 140564120979200] ProgrammingError: ERROR:  relation "project" does not exist
+[Mon Nov 28 21:05:57.082788 2016] [:error] [pid 8814:tid 140564120979200] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o...
+[Mon Nov 28 21:05:57.082790 2016] [:error] [pid 8814:tid 140564120979200]                                                              ^
+[Mon Nov 28 21:05:57.082792 2016] [:error] [pid 8814:tid 140564120979200]
+[Mon Nov 28 21:08:34.897038 2016] [mpm_event:notice] [pid 21353:tid 140564340529024] AH00491: caught SIGTERM, shutting down
+[Mon Nov 28 21:08:35.886071 2016] [mpm_event:notice] [pid 9144:tid 140102942033792] AH00489: Apache/2.4.7 (Ubuntu) mod_wsgi/3.4 Python/2.7.6 configured -- resuming normal operations
+[Mon Nov 28 21:08:35.886148 2016] [core:notice] [pid 9144:tid 140102942033792] AH00094: Command line: '/usr/sbin/apache2'
+
+
+
+
+
+
+
+^C
+ubuntu@ip-172-31-47-237:/var/www/python_wiki_app_redo$

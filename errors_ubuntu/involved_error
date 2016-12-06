@@ -1,0 +1,357 @@
+Last login: Mon Nov 28 15:50:56 on ttys000
+~: login_aws
+Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-92-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Mon Nov 28 20:49:26 UTC 2016
+
+  System load:  0.0               Processes:           107
+  Usage of /:   16.1% of 7.74GB   Users logged in:     0
+  Memory usage: 19%               IP address for eth0: 172.31.47.237
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+76 packages can be updated.
+43 updates are security updates.
+
+
+*** System restart required ***
+Last login: Mon Nov 28 20:49:27 2016 from 64.124.76.250
+ubuntu@ip-172-31-47-237:~$
+ubuntu@ip-172-31-47-237:~$ cd /var/log
+ubuntu@ip-172-31-47-237:/var/log$ cd apache2
+ubuntu@ip-172-31-47-237:/var/log/apache2$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ubuntu@ip-172-31-47-237:/var/log/apache2$ ls
+access.log       access.log.4.gz  error.log.1     error.log.5.gz
+access.log.1     access.log.5.gz  error.log.2.gz  error.log.6.gz
+access.log.2.gz  access.log.6.gz  error.log.3.gz  other_vhosts_access.log
+access.log.3.gz  error.log        error.log.4.gz
+ubuntu@ip-172-31-47-237:/var/log/apache2$ tail -f error.log
+[Mon Nov 28 20:51:18.962602 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] Traceback (most recent call last):, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962651 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]   File "/var/www/python_wiki_app_redo/wsgi.py", line 11, in <module>, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962717 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]     from server import app as application, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962762 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]   File "/var/www/python_wiki_app_redo/server.py", line 14, in <module>, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962806 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]     passwd=os.environ.get('PG_PASSWORD'), referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962843 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1385, in __init__, referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962886 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050]     db = connect(*args, **kw), referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962933 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] InternalError: FATAL:  password authentication failed for user "tmoney", referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.962980 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] FATAL:  password authentication failed for user "tmoney", referer: http://wikiapp.tech/
+[Mon Nov 28 20:51:18.963005 2016] [:error] [pid 3358:tid 140564112586496] [client 64.124.76.250:59050] , referer: http://wikiapp.tech/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Mon Nov 28 20:56:51.177438 2016] [mpm_event:notice] [pid 21353:tid 140564340529024] AH00493: SIGUSR1 received.  Doing graceful restart
+[Mon Nov 28 20:56:51.195573 2016] [mpm_event:notice] [pid 21353:tid 140564340529024] AH00489: Apache/2.4.7 (Ubuntu) mod_wsgi/3.4 Python/2.7.6 configured -- resuming normal operations
+[Mon Nov 28 20:56:51.195657 2016] [core:notice] [pid 21353:tid 140564340529024] AH00094: Command line: '/usr/sbin/apache2'
+[Mon Nov 28 20:57:50.498195 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097] [2016-11-28 20:57:50,497] ERROR in app: Exception on /projects [GET], referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498295 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097] Traceback (most recent call last):, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498350 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498377 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]     response = self.full_dispatch_request(), referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498417 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498441 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]     rv = self.handle_user_exception(e), referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498463 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498485 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]     reraise(exc_type, exc_value, tb), referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498506 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498531 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]     rv = self.dispatch_request(), referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498558 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498578 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498596 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]   File "/var/www/involved/server.py", line 248, in view_projects, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498625 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc'), referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498647 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498667 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]     return self.db.query(command), referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498686 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097] ProgrammingError: ERROR:  relation "project" does not exist, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498704 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o..., referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498727 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097]                                                              ^, referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498758 2016] [:error] [pid 8814:tid 140564146157312] [client 64.124.76.250:59097] , referer: http://involved.tech/
+[Mon Nov 28 20:57:50.498859 2016] [:error] [pid 8814:tid 140564146157312] ERROR:if_you_care:Exception on /projects [GET]
+[Mon Nov 28 20:57:50.498903 2016] [:error] [pid 8814:tid 140564146157312] Traceback (most recent call last):
+[Mon Nov 28 20:57:50.498922 2016] [:error] [pid 8814:tid 140564146157312]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Mon Nov 28 20:57:50.498952 2016] [:error] [pid 8814:tid 140564146157312]     response = self.full_dispatch_request()
+[Mon Nov 28 20:57:50.498970 2016] [:error] [pid 8814:tid 140564146157312]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Mon Nov 28 20:57:50.498988 2016] [:error] [pid 8814:tid 140564146157312]     rv = self.handle_user_exception(e)
+[Mon Nov 28 20:57:50.499006 2016] [:error] [pid 8814:tid 140564146157312]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Mon Nov 28 20:57:50.499024 2016] [:error] [pid 8814:tid 140564146157312]     reraise(exc_type, exc_value, tb)
+[Mon Nov 28 20:57:50.499045 2016] [:error] [pid 8814:tid 140564146157312]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Mon Nov 28 20:57:50.499064 2016] [:error] [pid 8814:tid 140564146157312]     rv = self.dispatch_request()
+[Mon Nov 28 20:57:50.499082 2016] [:error] [pid 8814:tid 140564146157312]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Mon Nov 28 20:57:50.499137 2016] [:error] [pid 8814:tid 140564146157312]     return self.view_functions[rule.endpoint](**req.view_args)
+[Mon Nov 28 20:57:50.499163 2016] [:error] [pid 8814:tid 140564146157312]   File "/var/www/involved/server.py", line 248, in view_projects
+[Mon Nov 28 20:57:50.499182 2016] [:error] [pid 8814:tid 140564146157312]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc')
+[Mon Nov 28 20:57:50.499203 2016] [:error] [pid 8814:tid 140564146157312]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query
+[Mon Nov 28 20:57:50.499222 2016] [:error] [pid 8814:tid 140564146157312]     return self.db.query(command)
+[Mon Nov 28 20:57:50.499241 2016] [:error] [pid 8814:tid 140564146157312] ProgrammingError: ERROR:  relation "project" does not exist
+[Mon Nov 28 20:57:50.499258 2016] [:error] [pid 8814:tid 140564146157312] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o...
+[Mon Nov 28 20:57:50.499273 2016] [:error] [pid 8814:tid 140564146157312]                                                              ^
+[Mon Nov 28 20:57:50.499289 2016] [:error] [pid 8814:tid 140564146157312]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Mon Nov 28 20:59:20.617202 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111] [2016-11-28 20:59:20,616] ERROR in app: Exception on /projects [GET], referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617296 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111] Traceback (most recent call last):, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617347 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617399 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]     response = self.full_dispatch_request(), referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617428 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617467 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]     rv = self.handle_user_exception(e), referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617503 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617533 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]     reraise(exc_type, exc_value, tb), referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617556 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617580 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]     rv = self.dispatch_request(), referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617606 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617629 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617648 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]   File "/var/www/involved/server.py", line 248, in view_projects, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617678 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc'), referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617700 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617719 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]     return self.db.query(command), referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617737 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111] ProgrammingError: ERROR:  relation "project" does not exist, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617755 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o..., referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617774 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111]                                                              ^, referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617796 2016] [:error] [pid 8814:tid 140564230420224] [client 64.124.76.250:59111] , referer: http://involved.tech/
+[Mon Nov 28 20:59:20.617894 2016] [:error] [pid 8814:tid 140564230420224] ERROR:if_you_care:Exception on /projects [GET]
+[Mon Nov 28 20:59:20.617927 2016] [:error] [pid 8814:tid 140564230420224] Traceback (most recent call last):
+[Mon Nov 28 20:59:20.617953 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Mon Nov 28 20:59:20.617974 2016] [:error] [pid 8814:tid 140564230420224]     response = self.full_dispatch_request()
+[Mon Nov 28 20:59:20.617992 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Mon Nov 28 20:59:20.618023 2016] [:error] [pid 8814:tid 140564230420224]     rv = self.handle_user_exception(e)
+[Mon Nov 28 20:59:20.618043 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Mon Nov 28 20:59:20.618061 2016] [:error] [pid 8814:tid 140564230420224]     reraise(exc_type, exc_value, tb)
+[Mon Nov 28 20:59:20.618079 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Mon Nov 28 20:59:20.618098 2016] [:error] [pid 8814:tid 140564230420224]     rv = self.dispatch_request()
+[Mon Nov 28 20:59:20.618115 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Mon Nov 28 20:59:20.618145 2016] [:error] [pid 8814:tid 140564230420224]     return self.view_functions[rule.endpoint](**req.view_args)
+[Mon Nov 28 20:59:20.618163 2016] [:error] [pid 8814:tid 140564230420224]   File "/var/www/involved/server.py", line 248, in view_projects
+[Mon Nov 28 20:59:20.618181 2016] [:error] [pid 8814:tid 140564230420224]     query = db.query('select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc')
+[Mon Nov 28 20:59:20.618201 2016] [:error] [pid 8814:tid 140564230420224]   File "/usr/local/lib/python2.7/dist-packages/pg.py", line 1735, in query
+[Mon Nov 28 20:59:20.618220 2016] [:error] [pid 8814:tid 140564230420224]     return self.db.query(command)
+[Mon Nov 28 20:59:20.618240 2016] [:error] [pid 8814:tid 140564230420224] ProgrammingError: ERROR:  relation "project" does not exist
+[Mon Nov 28 20:59:20.618256 2016] [:error] [pid 8814:tid 140564230420224] LINE 1: ... Time, project.vol_needed, project.vol_total from project, o...
+[Mon Nov 28 20:59:20.618271 2016] [:error] [pid 8814:tid 140564230420224]                                                              ^
+[Mon Nov 28 20:59:20.618286 2016] [:error] [pid 8814:tid 140564230420224]
+^C
+ubuntu@ip-172-31-47-237:/var/log/apache2$ psql
+'psql: FATAL:  role "ubuntu" does not exist
+ubuntu@ip-172-31-47-237:/var/log/apache2$ psql -U postgres
+psql: FATAL:  Peer authentication failed for user "postgres"
+ubuntu@ip-172-31-47-237:/var/log/apache2$ psql -U postgres -W
+Password for user postgres:
+psql: FATAL:  Peer authentication failed for user "postgres"
+ubuntu@ip-172-31-47-237:/var/log/apache2$ psql -U postgres -W
+Password for user postgres:
+psql: FATAL:  Peer authentication failed for user "postgres"
+ubuntu@ip-172-31-47-237:/var/log/apache2$ psql -U postgres -W
+Password for user postgres:
+psql: FATAL:  Peer authentication failed for user "postgres"
+ubuntu@ip-172-31-47-237:/var/log/apache2$ psql -U postgres -W
+Password for user postgres:
+psql: FATAL:  Peer authentication failed for user "postgres"
+ubuntu@ip-172-31-47-237:/var/log/apache2$ ls
+access.log    access.log.2.gz  access.log.4.gz  access.log.6.gz  error.log.1     error.log.3.gz  error.log.5.gz  other_vhosts_access.log
+access.log.1  access.log.3.gz  access.log.5.gz  error.log        error.log.2.gz  error.log.4.gz  error.log.6.gz
+ubuntu@ip-172-31-47-237:/var/log/apache2$ cd ..
+ubuntu@ip-172-31-47-237:/var/log$  cd ..
+ubuntu@ip-172-31-47-237:/var$ cd www
+ubuntu@ip-172-31-47-237:/var/www$ ls
+e_commerce_project  html  involved  python_wiki_app_redo
+ubuntu@ip-172-31-47-237:/var/www$ cd involved/
+ubuntu@ip-172-31-47-237:/var/www/involved$ ls
+involved  README.md  server.py  static  structure.sql  templates  test.py  wsgi.py
+ubuntu@ip-172-31-47-237:/var/www/involved$ less .env
+ubuntu@ip-172-31-47-237:/var/www/involved$ psql -U postgres -W volunteer_db
+Password for user postgres:
+psql: FATAL:  Peer authentication failed for user "postgres"
+ubuntu@ip-172-31-47-237:/var/www/involved$ psql -U postgres -W volunteer_db -H localhost
+psql: warning: extra command-line argument "localhost" ignored
+Password for user postgres:
+psql: FATAL:  Peer authentication failed for user "postgres"
+ubuntu@ip-172-31-47-237:/var/www/involved$ psql -U postgres -W volunteer_db -H localhost
+psql: warning: extra command-line argument "localhost" ignored
+Password for user postgres:
+ubuntu@ip-172-31-47-237:/var/www/involved$ psql -h
+/usr/lib/postgresql/9.6/bin/psql: option requires an argument -- 'h'
+Try "psql --help" for more information.
+ubuntu@ip-172-31-47-237:/var/www/involved$ psql --help
+psql is the PostgreSQL interactive terminal.
+
+Usage:
+  psql [OPTION]... [DBNAME [USERNAME]]
+
+General options:
+  -c, --command=COMMAND    run only single command (SQL or internal) and exit
+  -d, --dbname=DBNAME      database name to connect to (default: "ubuntu")
+  -f, --file=FILENAME      execute commands from file, then exit
+  -l, --list               list available databases, then exit
+  -v, --set=, --variable=NAME=VALUE
+                           set psql variable NAME to VALUE
+                           (e.g., -v ON_ERROR_STOP=1)
+  -V, --version            output version information, then exit
+  -X, --no-psqlrc          do not read startup file (~/.psqlrc)
+  -1 ("one"), --single-transaction
+                           execute as a single transaction (if non-interactive)
+  -?, --help[=options]     show this help, then exit
+      --help=commands      list backslash commands, then exit
+      --help=variables     list special variables, then exit
+
+Input and output options:
+  -a, --echo-all           echo all input from script
+  -b, --echo-errors        echo failed commands
+  -e, --echo-queries       echo commands sent to server
+  -E, --echo-hidden        display queries that internal commands generate
+  -L, --log-file=FILENAME  send session log to file
+  -n, --no-readline        disable enhanced command line editing (readline)
+  -o, --output=FILENAME    send query results to file (or |pipe)
+  -q, --quiet              run quietly (no messages, only query output)
+  -s, --single-step        single-step mode (confirm each query)
+  -S, --single-line        single-line mode (end of line terminates SQL command)
+
+Output format options:
+  -A, --no-align           unaligned table output mode
+  -F, --field-separator=STRING
+                           field separator for unaligned output (default: "|")
+  -H, --html               HTML table output mode
+  -P, --pset=VAR[=ARG]     set printing option VAR to ARG (see \pset command)
+  -R, --record-separator=STRING
+                           record separator for unaligned output (default: newline)
+  -t, --tuples-only        print rows only
+  -T, --table-attr=TEXT    set HTML table tag attributes (e.g., width, border)
+  -x, --expanded           turn on expanded table output
+  -z, --field-separator-zero
+                           set field separator for unaligned output to zero byte
+  -0, --record-separator-zero
+                           set record separator for unaligned output to zero byte
+
+Connection options:
+  -h, --host=HOSTNAME      database server host or socket directory (default: "/var/run/postgresql")
+  -p, --port=PORT          database server port (default: "5432")
+  -U, --username=USERNAME  database user name (default: "ubuntu")
+  -w, --no-password        never prompt for password
+  -W, --password           force password prompt (should happen automatically)
+
+For more information, type "\?" (for internal commands) or "\help" (for SQL
+commands) from within psql, or consult the psql section in the PostgreSQL
+documentation.
+
+Report bugs to <pgsql-bugs@postgresql.org>.
+ubuntu@ip-172-31-47-237:/var/www/involved$ psql -U postgres -W volunteer_db -h localhost
+Password for user postgres:
+psql (9.6.0)
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+volunteer_db=# select * from project;
+volunteer_db=# select organization.name as Organization, project.id as project_id, organization.id as org_id, project.name as Project, project.project_description as Description, project.start_date as Date, project.start_time as Time, project.vol_needed, project.vol_total from project, organization where project.organization_id = organization.id order by date desc;
+volunteer_db=# \q
+ubuntu@ip-172-31-47-237:/var/www/involved$ ls
+involved  README.md  server.py  static  structure.sql  templates  test.py  wsgi.py
+ubuntu@ip-172-31-47-237:/var/www/involved$ less .env
+ubuntu@ip-172-31-47-237:/var/www/involved$ less server.py
+
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
+
+from flask import Flask, render_template, request, redirect, session, flash
+import pg
+import datetime
+import os
+# import time
+
+db = pg.DB(
+    dbname=os.environ.get('PG_DBNAME'),
+    host=os.environ.get('PG_HOST'),
+    user=os.environ.get('PG_USERNAME'),
+    passwd=os.environ.get('PG_PASSWORD')
+)
+
+tmp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+app = Flask('if_you_care', template_folder=tmp_dir)
+
+app.secret_key = 'give_a_little'
+
+@app.route('/')
+def home_page():
+    count = session.get('count', 0)
+    session['count'] = count + 1
+
+    return render_template(
+        'homepage.html',
+        title='If You Care'
+    )
+
+@app.route('/registration')
+def register_user():
+    return render_template(
+        'register_user.html'
+    )
+
+@app.route('/login')
+def login_user():
+    return render_template(
+        'login.html'
+    )
+
+@app.route('/new_login')
+def new_login():
+    if session['vol_email']:
+        del session['vol_email']
+    elif session['org_email']:
+        del session['org_email']
+    return redirect('/login')
+
+@app.route('/vol_login_handler', methods=['POST'])
+def vol_login():
+server.py
